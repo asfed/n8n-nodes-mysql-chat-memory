@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-mysql-chat-memory",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom n8n node for using MySQL as chat memory for AI agents",
   "main": "index.js",
   "scripts": {
