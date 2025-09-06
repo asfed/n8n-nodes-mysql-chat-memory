@@ -1,0 +1,57 @@
+{
+  "name": "n8n-nodes-mysql-chat-memory",
+  "version": "1.0.0",
+  "description": "A custom n8n node for using MySQL as chat memory for AI agents",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && npm run build:images",
+    "build:images": "copyfiles nodes/**/*.svg dist/",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "n8n",
+    "n8n-nodes",
+    "chat-memory",
+    "ai",
+    "n8n-nodes-mysql-chat-memory",
+    "mysql"
+  ],
+  "author": {
+    "name": "Andrey Fedorov",
+    "email": "asfedorov@gmail.com"
+  },
+  "homepage": "https://github.com/asfed/n8n-nodes-mysql-chat-memory#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asfed/n8n-nodes-mysql-chat-memory.git"
+  },
+  "dependencies": {
+    "@langchain/core": ">=0.1.29 <0.4.0",
+    "mysql2": "^3.14.4",
+    "n8n-workflow": "^1.106.0"
+  },
+  "n8n": {
+    "credentials": [
+      "./dist/credentials/MysqlChatMemory.credentials.js"
+    ],
+    "nodes": [
+      "./dist/nodes/MysqlChatMemory/MysqlChatMemory.node.js"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "copyfiles": "^2.4.1",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/asfed/n8n-nodes-mysql-chat-memory/issues"
+  }
+}
